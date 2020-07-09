@@ -4,6 +4,11 @@ class FlavorsController < ApplicationController
         render json: @flavors
     end
 
+    def create
+        @flavor = Flavor.create(name: params[:name])
+    end
+
+
     # def show 
     #     @flavor = Flavor.find(params[:id])
     #     render json: @flavor

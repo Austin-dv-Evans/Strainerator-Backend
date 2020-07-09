@@ -5,5 +5,9 @@ class FinalesController < ApplicationController
         render json: @finales
     end
 
+    def create
+        @finale = Finale.create(name: params[:name])
+    end
+
 
 end
